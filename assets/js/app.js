@@ -13291,7 +13291,7 @@ function freeMode(_ref) {
 
     data.velocities.push({
       position: touches[swiper.isHorizontal() ? 'currentX' : 'currentY'],
-      time: now()
+      time: utils_now()
     });
   }
 
@@ -13307,7 +13307,7 @@ function freeMode(_ref) {
       touchEventsData: data
     } = swiper; // Time diff
 
-    const touchEndTime = now();
+    const touchEndTime = utils_now();
     const timeDiff = touchEndTime - data.touchStartTime;
 
     if (currentPos < -swiper.minTranslate()) {
@@ -13340,7 +13340,7 @@ function freeMode(_ref) {
         // There would be no events with distance zero, so the last event is stale.
 
 
-        if (time > 150 || now() - lastMoveEvent.time > 300) {
+        if (time > 150 || utils_now() - lastMoveEvent.time > 300) {
           swiper.velocity = 0;
         }
       } else {
@@ -14627,6 +14627,57 @@ var sliderSwiper = function sliderSwiper() {
                     },
                 },
                 */
+      // События
+      on: {}
+    });
+  }
+
+  if (document.querySelector(".cases-main-slider__swiper")) {
+    // Указываем скласс нужного слайдера
+    // Создаем слайдер
+    new core(".cases-main-slider__swiper", {
+      // Указываем скласс нужного слайдера
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [freeMode],
+      freeMode: true,
+      observer: true,
+      observeParents: true,
+      slidesPerView: 3,
+      spaceBetween: 20,
+      speed: 500,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      loop: false,
+      //preloadImages: false,
+      //lazy: true,
+      // Эффекты
+      //   autoplay: {
+      //     delay: 3000,
+      //     disableOnInteraction: false,
+      //   },
+      // Пагинация
+      // Скроллбар
+
+      /*
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                    draggable: true,
+                },
+                */
+      // Кнопки "влево/вправо"
+      // Брейкпоинты
+      breakpoints: {
+        320: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+          autoHeight: true
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 20
+        }
+      },
       // События
       on: {}
     });
