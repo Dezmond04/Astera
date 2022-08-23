@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Главная</title>
-    <script defer="defer" src="/assets/js/app.js"></script>
-    <link href="/assets/css/app.css" rel="stylesheet" />
+    <script defer="defer" src="./assets/js/app.js"></script>
+    <link href="./assets/css/app.css" rel="stylesheet" />
   </head>
   <body>
     <div class="wrapper">
@@ -598,7 +598,7 @@
                 <h2 class="show-room__title title">
                   Посетите один из наших шоу-румов
                 </h2>
-                <div class="show-room__tabs">
+                <div data-showroom-tabs class="show-room__tabs">
                   <div class="show-room__buttons">
                     <button class="show-room__button _active">
                       ТЦ Три Кита
@@ -616,26 +616,43 @@
                           график работы: 10:00 - 21:00
                         </div>
                       </div>
-                      <button class="show-room__tabs-button primary-btn">
+                      <button
+                        data-popup="#callBack"
+                        class="show-room__tabs-button primary-btn"
+                      >
                         ПОСЕТИТЬ
                       </button>
                     </div>
                     <div class="show-room__tabs-body">
                       <div class="show-room__tabs-wrapper">
                         <div class="show-room__tabs-name">
-                          Московская обл. , Одинцовский ГО, р.п. Новоивановское,
-                          ул. Луговая, д.1
+                          г. Дзержинский, ул. Энергетиков, 14А
                         </div>
                         <div class="show-room__tabs-chart">
                           график работы: 10:00 - 21:00
                         </div>
                       </div>
-                      <button class="show-room__tabs-button primary-btn">
+                      <button
+                        data-popup="#callBack"
+                        class="show-room__tabs-button primary-btn"
+                      >
                         ПОСЕТИТЬ
                       </button>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="show-room__image _active">
+                <img
+                  src="assets/img/show-room/show-room-image-1.jpg"
+                  alt="Section Image"
+                  class="show-room__img"
+                />
+                <button
+                  data-popup="#video"
+                  data-youtube="neV3EPgvZ3g"
+                  class="show-room__play-btn play _icon-play"
+                ></button>
               </div>
               <div class="show-room__image">
                 <img
@@ -1708,7 +1725,13 @@
               <div class="footer__contacts">
                 <div class="footer__adress-name">НАШИ АДРЕСА:</div>
                 <div class="footer__adress">
-                  <span>Адрес 1</span> <span>Адрес 2</span>
+                  <span
+                    >ТК ТРИ КИТА, Московская обл. , Одинцовский ГО, р.п.
+                    Новоивановское, ул. Луговая, д.1</span
+                  >
+                  <span
+                    >ТЦ Интерьер СИТИ г. Дзержинский, ул. Энергетиков, 14А</span
+                  >
                 </div>
                 <div class="footer__contact-links">
                   <a href="tel:+79999999999" class="footer__phone"

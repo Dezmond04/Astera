@@ -3199,6 +3199,7 @@ var customSlider = function customSlider() {
         sliderTotal.textContent = slides.length;
         slides.forEach(function (slide, index) {
           if (slide.classList.contains("_active")) {
+            console.log(slides.length);
             sliderCurrentSlide.textContent = index + 1;
           }
         });
@@ -14770,6 +14771,29 @@ var script = function script() {
   var goBtn = document.querySelectorAll("[data-go]");
   var locationTabsBtn = document.querySelectorAll(".location__tabs-button");
   var locationTabsImg = document.querySelectorAll(".location__image");
+  var showRoomTabs = document.querySelector('[data-showroom-tabs]');
+  var showRoomBtn = showRoomTabs.querySelectorAll('.show-room__button');
+  var showRoomBody = showRoomTabs.querySelectorAll('.show-room__tabs-body');
+  var showRoomImg = document.querySelectorAll('.show-room__image');
+
+  var removeTabsActive = function removeTabsActive() {
+    showRoomBtn.forEach(function (btn) {
+      if (btn.classList.contains('_active')) {
+        btn.classList.remove('_active');
+      }
+    });
+    showRoomBody.forEach(function (body) {
+      if (body.classList.contains('_active')) {
+        body.classList.remove('_active');
+      }
+    });
+    showRoomImg.forEach(function (img) {
+      if (img.classList.contains('_active')) {
+        img.classList.remove('_active');
+      }
+    });
+  };
+
   locationTabsBtn.forEach(function (tabsBtn, index) {
     tabsBtn.addEventListener("click", function (e) {
       if (e.target.closest(".location__tabs-map")) {
@@ -14801,6 +14825,17 @@ var script = function script() {
       });
     });
   });
+
+  if (showRoomBtn) {
+    showRoomBtn.forEach(function (btn, index) {
+      btn.addEventListener('click', function () {
+        removeTabsActive();
+        btn.classList.add('_active');
+        showRoomBody[index].classList.add('_active');
+        showRoomImg[index].classList.add('_active');
+      });
+    });
+  }
 };
 
 /* harmony default export */ var module_script = (script);
