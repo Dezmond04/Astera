@@ -14845,24 +14845,6 @@ var script = function script() {
     });
   });
 
-  var removeTabsActive = function removeTabsActive() {
-    showRoomBtn.forEach(function (btn) {
-      if (btn.classList.contains("_active")) {
-        btn.classList.remove("_active");
-      }
-    });
-    showRoomBody.forEach(function (body) {
-      if (body.classList.contains("_active")) {
-        body.classList.remove("_active");
-      }
-    });
-    showRoomImg.forEach(function (img) {
-      if (img.classList.contains("_active")) {
-        img.classList.remove("_active");
-      }
-    });
-  };
-
   if (locationTabsBtn) {
     locationTabsBtn.forEach(function (tabsBtn, index) {
       tabsBtn.addEventListener("click", function (e) {
@@ -14899,17 +14881,32 @@ var script = function script() {
   });
 
   if (showRoomTabs) {
-    var _showRoomBtn = showRoomTabs.querySelectorAll(".show-room__button");
+    var showRoomBtn = showRoomTabs.querySelectorAll(".show-room__button");
+    var showRoomBody = showRoomTabs.querySelectorAll(".show-room__tabs-body");
 
-    var _showRoomBody = showRoomTabs.querySelectorAll(".show-room__tabs-body");
+    var removeTabsActive = function removeTabsActive() {
+      showRoomBtn.forEach(function (btn) {
+        if (btn.classList.contains("_active")) {
+          btn.classList.remove("_active");
+        }
+      });
+      showRoomBody.forEach(function (body) {
+        if (body.classList.contains("_active")) {
+          body.classList.remove("_active");
+        }
+      });
+      showRoomImg.forEach(function (img) {
+        if (img.classList.contains("_active")) {
+          img.classList.remove("_active");
+        }
+      });
+    };
 
-    _showRoomBtn.forEach(function (btn, index) {
+    showRoomBtn.forEach(function (btn, index) {
       btn.addEventListener("click", function () {
         removeTabsActive();
         btn.classList.add("_active");
-
-        _showRoomBody[index].classList.add("_active");
-
+        showRoomBody[index].classList.add("_active");
         showRoomImg[index].classList.add("_active");
       });
     });

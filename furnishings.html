@@ -520,7 +520,7 @@
                 <h2 class="show-room__title title">
                   Посетите один из наших шоу-румов
                 </h2>
-                <div class="show-room__tabs">
+                <div data-showroom-tabs class="show-room__tabs">
                   <div class="show-room__buttons">
                     <button class="show-room__button _active">
                       ТЦ Три Кита
@@ -538,26 +538,37 @@
                           график работы: 10:00 - 21:00
                         </div>
                       </div>
-                      <button class="show-room__tabs-button primary-btn">
+                      <button data-popup="#callBack" class="show-room__tabs-button primary-btn">
                         ПОСЕТИТЬ
                       </button>
                     </div>
                     <div class="show-room__tabs-body">
                       <div class="show-room__tabs-wrapper">
                         <div class="show-room__tabs-name">
-                          Московская обл. , Одинцовский ГО, р.п. Новоивановское,
-                          ул. Луговая, д.1
+                          г. Дзержинский, ул. Энергетиков, 14А
                         </div>
                         <div class="show-room__tabs-chart">
                           график работы: 10:00 - 21:00
                         </div>
                       </div>
-                      <button class="show-room__tabs-button primary-btn">
+                      <button data-popup="#callBack" class="show-room__tabs-button primary-btn">
                         ПОСЕТИТЬ
                       </button>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="show-room__image _active">
+                <img
+                  src="assets/img/show-room/show-room-image-1.jpg"
+                  alt="Section Image"
+                  class="show-room__img"
+                />
+                <button
+                  data-popup="#video"
+                  data-youtube="neV3EPgvZ3g"
+                  class="show-room__play-btn play _icon-play"
+                ></button>
               </div>
               <div class="show-room__image">
                 <img
@@ -565,7 +576,11 @@
                   alt="Section Image"
                   class="show-room__img"
                 />
-                <button class="show-room__play-btn play _icon-play"></button>
+                <button
+                  data-popup="#video"
+                  data-youtube="neV3EPgvZ3g"
+                  class="show-room__play-btn play _icon-play"
+                ></button>
               </div>
             </div>
           </div>
