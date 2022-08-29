@@ -3017,7 +3017,7 @@ function lightGallery(el, options) {
   return new LightGallery(el, options);
 }
 
-/* harmony default export */ var lightgallery_es5 = (lightGallery);
+/* harmony default export */ var lightgallery_es5 = ((/* unused pure expression or super */ null && (lightGallery)));
 ;// CONCATENATED MODULE: ./src/js/module/popup.js
 
 
@@ -3037,8 +3037,8 @@ var popup = function popup() {
   popupBtn.forEach(function (btn) {
     btn.addEventListener("click", function () {
       popupClose();
-      var popupWindow = document.querySelector(btn.getAttribute("data-popup"));
-      var galleries = popupWindow.querySelector("[data-gallery]");
+      var popupWindow = document.querySelector(btn.getAttribute("data-popup")); // const galleries = popupWindow.querySelector("[data-gallery]");
+
       var popupWindowWrapper = popupWindow.querySelector(".popup__wrapper");
       var popupWindowClose = popupWindow.querySelector(".popup__close");
       var btnCaptionValue = btn.getAttribute("data-caption");
@@ -3055,11 +3055,6 @@ var popup = function popup() {
         videoPlace.innerHTML = "<iframe src=\"https://www.youtube.com/embed/".concat(videoCode, "\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>");
       } else if (imgSrc) {
         videoPlace.innerHTML = "<img\n        src=\"".concat(imgSrc, "\"\n        alt=\"Image\"\n        class=\"popup-zoom__img\"\n      />");
-      }
-
-      if (galleries) {
-        var gallery = lightgallery_es5(galleries);
-        gallery.destroy();
       }
 
       popupWindow.classList.add("popup__show");
@@ -3101,6 +3096,26 @@ var popup = function popup() {
 };
 
 /* harmony default export */ var module_popup = (popup);
+;// CONCATENATED MODULE: ./src/js/module/caseImage.js
+var caseImage = function caseImage() {
+  var caseMainImage = document.querySelector('.cases-main__main-image img');
+  var caseBottomImage = document.querySelectorAll('.cases-main-slider__slide');
+  var caseZoom = document.querySelector('.cases-main__zoom');
+
+  if (caseBottomImage) {
+    caseBottomImage.forEach(function (img) {
+      img.addEventListener('click', function (e) {
+        if (!e.target.closest('.play')) {
+          var image = img.querySelector('img');
+          caseMainImage.src = image.src;
+          caseZoom.setAttribute('data-src', caseMainImage.src);
+        }
+      });
+    });
+  }
+};
+
+/* harmony default export */ var module_caseImage = (caseImage);
 ;// CONCATENATED MODULE: ./src/js/module/tabs.js
 var tabs = function tabs() {
   var tabsButton = document.querySelectorAll("[data-tab-btn] > button");
@@ -3195,11 +3210,10 @@ var customSlider = function customSlider() {
     };
 
     var renderFraction = function renderFraction() {
-      if (slides.length) {
+      if (slides.length && sliderTotal) {
         sliderTotal.textContent = slides.length;
         slides.forEach(function (slide, index) {
           if (slide.classList.contains("_active")) {
-            console.log(slides.length);
             sliderCurrentSlide.textContent = index + 1;
           }
         });
@@ -14703,7 +14717,6 @@ var afterBeforeVertical = function afterBeforeVertical() {
   var projectFunction = function projectFunction() {
     setTimeout(function () {
       project.forEach(function (i) {
-        console.log(i);
         var before = i.querySelector(".after-before__after");
         var change = i.querySelector(".after-before__line");
         var beforeImage = before.querySelector("img");
@@ -14712,8 +14725,6 @@ var afterBeforeVertical = function afterBeforeVertical() {
 
         var beforeAfterSlider = function beforeAfterSlider(x) {
           var shift = Math.max(0, Math.min(x, i.offsetHeight));
-          console.log(i.offsetHeight);
-          console.log(x);
           before.style.height = "".concat(shift, "px");
           change.style.top = "".concat(shift, "px");
         };
@@ -14921,6 +14932,8 @@ mobileMenu(); // Подключения блока с попапами
 
 
 module_popup();
+
+module_caseImage();
 
 module_tabs();
 
