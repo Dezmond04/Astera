@@ -14822,51 +14822,61 @@ var script = function script() {
   var goBtn = document.querySelectorAll("[data-go]");
   var locationTabsBtn = document.querySelectorAll(".location__tabs-button");
   var locationTabsImg = document.querySelectorAll(".location__image");
-  var showRoomTabs = document.querySelector('[data-showroom-tabs]');
-  var showRoomBtn = showRoomTabs.querySelectorAll('.show-room__button');
-  var showRoomBody = showRoomTabs.querySelectorAll('.show-room__tabs-body');
-  var showRoomImg = document.querySelectorAll('.show-room__image');
+  var showRoomTabs = document.querySelector("[data-showroom-tabs]");
+  var showRoomImg = document.querySelectorAll(".show-room__image");
+  var designerImages = document.querySelectorAll(".designer__second-images img");
+  var designerMainImage = document.querySelector(".designer__main-image img");
+  designerImages.forEach(function (img) {
+    img.addEventListener("click", function (e) {
+      if (e.target == img) {
+        designerMainImage.src = img.src;
+      }
+    });
+  });
 
   var removeTabsActive = function removeTabsActive() {
     showRoomBtn.forEach(function (btn) {
-      if (btn.classList.contains('_active')) {
-        btn.classList.remove('_active');
+      if (btn.classList.contains("_active")) {
+        btn.classList.remove("_active");
       }
     });
     showRoomBody.forEach(function (body) {
-      if (body.classList.contains('_active')) {
-        body.classList.remove('_active');
+      if (body.classList.contains("_active")) {
+        body.classList.remove("_active");
       }
     });
     showRoomImg.forEach(function (img) {
-      if (img.classList.contains('_active')) {
-        img.classList.remove('_active');
+      if (img.classList.contains("_active")) {
+        img.classList.remove("_active");
       }
     });
   };
 
-  locationTabsBtn.forEach(function (tabsBtn, index) {
-    tabsBtn.addEventListener("click", function (e) {
-      if (e.target.closest(".location__tabs-map")) {
-        console.log(e.target);
-        var popupWindow = document.querySelector(e.target.getAttribute("data-popup"));
-        popupWindow.classList.add("popup__show");
-      } else {
-        locationTabsBtn.forEach(function (tabsBtn) {
-          if (tabsBtn.classList.contains("_active")) {
-            tabsBtn.classList.remove("_active");
-          }
-        });
-        locationTabsImg.forEach(function (tabsImg) {
-          if (tabsImg.classList.contains("_active")) {
-            tabsImg.classList.remove("_active");
-          }
-        });
-        tabsBtn.classList.add("_active");
-        locationTabsImg[index].classList.add("_active");
-      }
+  if (locationTabsBtn) {
+    locationTabsBtn.forEach(function (tabsBtn, index) {
+      tabsBtn.addEventListener("click", function (e) {
+        if (e.target.closest(".location__tabs-map")) {
+          console.log(e.target);
+          var popupWindow = document.querySelector(e.target.getAttribute("data-popup"));
+          popupWindow.classList.add("popup__show");
+        } else {
+          locationTabsBtn.forEach(function (tabsBtn) {
+            if (tabsBtn.classList.contains("_active")) {
+              tabsBtn.classList.remove("_active");
+            }
+          });
+          locationTabsImg.forEach(function (tabsImg) {
+            if (tabsImg.classList.contains("_active")) {
+              tabsImg.classList.remove("_active");
+            }
+          });
+          tabsBtn.classList.add("_active");
+          locationTabsImg[index].classList.add("_active");
+        }
+      });
     });
-  });
+  }
+
   goBtn.forEach(function (goBtn) {
     goBtn.addEventListener("click", function () {
       var block = document.querySelector(goBtn.getAttribute("data-go"));
@@ -14877,13 +14887,19 @@ var script = function script() {
     });
   });
 
-  if (showRoomBtn) {
-    showRoomBtn.forEach(function (btn, index) {
-      btn.addEventListener('click', function () {
+  if (showRoomTabs) {
+    var _showRoomBtn = showRoomTabs.querySelectorAll(".show-room__button");
+
+    var _showRoomBody = showRoomTabs.querySelectorAll(".show-room__tabs-body");
+
+    _showRoomBtn.forEach(function (btn, index) {
+      btn.addEventListener("click", function () {
         removeTabsActive();
-        btn.classList.add('_active');
-        showRoomBody[index].classList.add('_active');
-        showRoomImg[index].classList.add('_active');
+        btn.classList.add("_active");
+
+        _showRoomBody[index].classList.add("_active");
+
+        showRoomImg[index].classList.add("_active");
       });
     });
   }
