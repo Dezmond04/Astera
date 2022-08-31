@@ -31,7 +31,7 @@
               <div class="header__contact">
                 <div class="header__social">
                   <a href="#" class="header__social-link _icon-whatsapp"></a>
-                  <a href="#" class="header__social-link _icon-telegram"></a>
+                  <a href="#" class="header__social-link _icon-vk"></a>
                 </div>
                 <div class="header__phone">
                   <a href="tel:+79099999999" class="header__phone-link"
@@ -219,7 +219,31 @@
                             боль клиента.
                           </div>
                           <button
-                            class="cases-slider__button more _icon-large-arrow"
+                            class="cases-slider__button-more more _icon-large-arrow"
+                          >
+                            <span>Подробнее</span>
+                            <span class="line"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cases-slider__slide swiper-slide">
+                      <div class="cases-slider__image">
+                        <img
+                          src="assets/img/cases-slider/cases-slider-image-1.jpg"
+                          alt="Slider Image"
+                          class="cases-slider__img"
+                        />
+                      </div>
+                      <div class="cases-slider__content">
+                        <h4 class="cases-slider__name">Название кейса</h4>
+                        <div class="cases-slider__text-wrapper">
+                          <div class="cases-slider__info">
+                            Краткое описание кейса, которое лучше раскрывает
+                            боль клиента.
+                          </div>
+                          <button
+                            class="cases-slider__button-more more _icon-large-arrow"
                           >
                             <span>Подробнее</span>
                             <span class="line"></span>
@@ -228,6 +252,15 @@
                       </div>
                     </div>
                   </div>
+                </div>
+                <div class="cases-slider__control">
+                  <button
+                    class="cases-slider__button cases-slider__button--prev _icon-slider-arrow"
+                  ></button>
+                  <div class="cases-slider__pagination"></div>
+                  <button
+                    class="cases-slider__button cases-slider__button--next _icon-slider-arrow"
+                  ></button>
                 </div>
               </div>
               <div class="cases__content">
@@ -242,8 +275,15 @@
                   У вас есть задача, которую нужно решить?
                 </div>
                 <div class="cases__buttons">
-                  <button class="cases__btn primary-btn">Да</button>
-                  <button class="cases__btn primary-btn">Нет</button>
+                  <button
+                    data-popup="#addedProject"
+                    class="cases__btn primary-btn"
+                  >
+                    Да
+                  </button>
+                  <button data-popup="#callBack" class="cases__btn primary-btn">
+                    Нет
+                  </button>
                   <button class="cases__button second-btn">
                     СМОТРЕТЬ ВСЕ ПРОЕКТЫ
                   </button>
@@ -1786,6 +1826,50 @@
           </form>
         </div>
       </div>
+    </div>
+    <div id="case" class="popup popup-case">
+      <div class="popup__wrapper">
+        <div class="popup__content">
+          <button class="popup__close"></button>
+          <div class="popup-case__wrapper">
+            <div class="popup-case__slider popup-case-slider">
+              <div class="popup-case-slider__swiper swiper">
+                <div class="popup-case-slider__wrapper swiper-wrapper">
+                  <div class="popup-case-slider__slide swiper-slide">
+                    <div class="popup-case-slider__image">
+                      <img src="assets/img/popup-case-slider/popup-case-slider-image-1.jpg" alt="Slider Image" class="popup-case-slider__img">
+                    </div>
+                  </div>
+                  <div class="popup-case-slider__slide swiper-slide">
+                    <div class="popup-case-slider__image">
+                      <img src="assets/img/popup-case-slider/popup-case-slider-image-1.jpg" alt="Slider Image" class="popup-case-slider__img">
+                    </div>
+                  </div>
+                  <div class="popup-case-slider__slide swiper-slide">
+                    <div class="popup-case-slider__image">
+                      <img src="assets/img/popup-case-slider/popup-case-slider-image-1.jpg" alt="Slider Image" class="popup-case-slider__img">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup-case-slider__controls">
+                <button class="popup-case-slider__button popup-case-slider__button--prev _icon-slider-arrow"></button>
+                <button class="popup-case-slider__button popup-case-slider__button--next _icon-slider-arrow"></button>
+              </div>
+            </div>
+            <div class="popup-case__descr">
+              <h4 class="popup__title">Название кухни</h4>
+              <p class="popup-case__info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam repudiandae cupiditate id, repellat voluptatibus at deserunt modi esse harum officia alias iste 
+              </p>
+              <p class="popup-case__info">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque architecto voluptate harum eius eveniet? Repellendus, officia nulla voluptas ullam et voluptatem 
+              </p>
+              <button data-popup="#callBack" class="popup-case__info__button primary-btn">Хочу такую</button>
+            </div>
+          </div>
+      </div>
+    </div>
     </div>
   </body>
 </html>
