@@ -14899,13 +14899,18 @@ var script = function script() {
   var locationTabsImg = document.querySelectorAll(".location__image");
   var showRoomTabs = document.querySelector("[data-showroom-tabs]");
   var showRoomImg = document.querySelectorAll(".show-room__image");
-  var designerImages = document.querySelectorAll(".designer__second-images img");
-  var designerMainImage = document.querySelector(".designer__main-image img");
-  designerImages.forEach(function (img) {
-    img.addEventListener("click", function (e) {
-      if (e.target == img) {
-        designerMainImage.src = img.src;
-      }
+  var designerImagesContainer = document.querySelectorAll(".designer__images");
+  designerImagesContainer.forEach(function (container) {
+    var mainImage = container.querySelector('.designer__main-image img');
+    var secondImages = container.querySelectorAll('.designer__second-image');
+    secondImages.forEach(function (image) {
+      image.addEventListener('click', function (e) {
+        var img = image.querySelector('img');
+
+        if (e.target == img) {
+          mainImage.src = img.src;
+        }
+      });
     });
   });
 
