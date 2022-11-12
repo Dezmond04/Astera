@@ -38,7 +38,9 @@
               <button class="header__menu menu"><span></span></button>
               <div class="menu__body">
                 <ul class="menu__list">
-                  <li class="menu__item"><a href="#">Пункт 1</a></li>
+                  <li class="menu__item">
+                    <a data-goto="cases" href="#">Пункт 1</a>
+                  </li>
                   <li class="menu__item"><a href="#">Пункт 2</a></li>
                   <li class="menu__item"><a href="#">Пункт 3</a></li>
                   <li class="menu__item"><a href="#">Пункт 4</a></li>
@@ -51,56 +53,93 @@
       </header>
       <main class="main">
         <section class="main-banner">
-          <div class="main-banner__container">
-            <h1 class="main-banner__title-mobile">
-              Красивые и функциональные кухни на заказ
-            </h1>
-          </div>
-          <div class="main-banner__image">
-            <img
-              src="assets/img/main-banner-image-1.jpg"
-              alt="Photo"
-              class="main-banner__img"
-            />
-            <img
-              src="assets/img/main-banner-image-1-mobile.jpg"
-              alt="Photo"
-              class="main-banner__img-mobile"
-            />
-            <button
-              data-popup="#video"
-              data-youtube="neV3EPgvZ3g"
-              class="main-banner__btn"
-            >
-              <span>Посмотреть видео</span>
-              <span class="play _icon-play"></span>
-            </button>
-          </div>
-          <div class="main-banner__container">
-            <div class="main-banner__content">
-              <h2 class="main-banner__title">
-                Красивые и функциональные кухни на заказ
-              </h2>
-              <div class="main-banner__info">
-                Эмоционально и функционально настроим пространство под вас
-              </div>
-              <div class="main-banner__project">
-                У вас уже есть дизайн-проект?
-              </div>
-              <div class="main-banner__button-wrapper">
-                <button
-                  data-popup="#callBack"
-                  class="main-banner__button primary-btn"
+          <div class="main-banner__slider main-banner-slider">
+            <div class="main-banner-slider__swiper swiper">
+              <div class="main-banner-slider__wrapper swiper-wrapper">
+                <div class="main-banner-slider__slide swiper-slide">
+                  <div class="main-banner__container">
+                    <h1 class="main-banner__title-mobile">
+                      Красивые и функциональные кухни на заказ
+                    </h1>
+                  </div>
+                  <div class="main-banner__image">
+                    <img
+                      src="assets/img/main-banner-image-1.jpg"
+                      alt="Photo"
+                      class="main-banner__img"
+                    />
+                    <img
+                      src="assets/img/main-banner-image-1-mobile.jpg"
+                      alt="Photo"
+                      class="main-banner__img-mobile"
+                    />
+                    <button
+                      data-popup="#video"
+                      data-youtube="neV3EPgvZ3g"
+                      class="main-banner__btn"
+                    >
+                      <span>Посмотреть видео</span>
+                      <span class="play _icon-play"></span>
+                    </button>
+                  </div>
+                  <div class="main-banner__container">
+                    <div class="main-banner__content">
+                      <h2 class="main-banner__title">
+                        Красивые и функциональные кухни на заказ
+                      </h2>
+                      <div class="main-banner__info">
+                        Эмоционально и функционально настроим пространство под
+                        вас
+                      </div>
+                      <div class="main-banner__project">
+                        У вас уже есть дизайн-проект?
+                      </div>
+                      <div class="main-banner__button-wrapper">
+                        <button
+                          data-popup="#callBack"
+                          class="main-banner__button primary-btn"
+                        >
+                          Да
+                        </button>
+                        <button
+                          data-go="#portfolio"
+                          class="main-banner__button primary-btn"
+                        >
+                          Нет
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="main-banner-slider__slide main-banner-slider__slide--fs main-banner-slider__slide_flc swiper-slide"
                 >
-                  Да
-                </button>
-                <button
-                  data-go="#portfolio"
-                  class="main-banner__button primary-btn"
-                >
-                  Нет
-                </button>
+                  <div class="main-banner__image">
+                    <img
+                      src="assets/img/main-banner-image-1.jpg"
+                      alt="Photo"
+                      class="main-banner__img"
+                    />
+                    <img
+                      src="assets/img/main-banner-image-1-mobile.jpg"
+                      alt="Photo"
+                      class="main-banner__img-mobile"
+                    />
+                    <a href="#" class="main-banner-slider__link"
+                      ><span class="text">Ссылка на какойто кейс</span>
+                      <span class="arrow _icon-large-arrow"></span
+                    ></a>
+                  </div>
+                </div>
               </div>
+            </div>
+            <div class="main-banner-slider__controls">
+              <button
+                class="main-banner-slider__button main-banner-slider__button--prev _icon-slider-arrow"
+              ></button>
+              <button
+                class="main-banner-slider__button main-banner-slider__button--next _icon-slider-arrow"
+              ></button>
             </div>
           </div>
         </section>
@@ -199,7 +238,7 @@
             </div>
           </div>
         </section>
-        <section class="cases">
+        <section id="cases" class="cases">
           <div class="cases__container">
             <div class="cases__wrapper">
               <div class="cases__slider cases-slider">
