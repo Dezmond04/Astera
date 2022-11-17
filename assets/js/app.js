@@ -18288,7 +18288,7 @@ var sliderSwiper = function sliderSwiper() {
       speed: 500,
       //touchRatio: 0,
       //simulateTouch: false,
-      loop: false,
+      loop: true,
       //preloadImages: false,
       //lazy: true,
       // Эффекты
