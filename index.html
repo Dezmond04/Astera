@@ -349,11 +349,9 @@
                 <a href="#" class="catalog__link">СОВРЕМЕННЫЕ</a>
               </div>
             </div>
-            <div data-gallery class="catalog__wrapper">
-              <a
-                href="assets/img/catalog-card/catalog-card-image-1.jpg"
-                class="catalog__card catalog-card"
-                ><div class="catalog-card__image">
+            <div class="catalog__wrapper">
+              <div data-popup="#zoomSlider" class="catalog__card catalog-card">
+                <div class="catalog-card__image">
                   <span class="catalog-card__discount">-20%</span>
                   <img
                     src="assets/img/catalog-card/catalog-card-image-1.jpg"
@@ -364,11 +362,10 @@
                 <div class="catalog-card__content">
                   <div class="catalog-card__name">Название модели</div>
                   <div class="catalog-card__price">от 99 999₽</div>
-                </div></a
-              ><a
-                href="assets/img/catalog-card/catalog-card-image-2.jpg"
-                class="catalog__card catalog-card"
-                ><div class="catalog-card__image">
+                </div>
+              </div>
+              <div data-popup="#zoomSlider" class="catalog__card catalog-card">
+                <div class="catalog-card__image">
                   <img
                     src="assets/img/catalog-card/catalog-card-image-2.jpg"
                     alt="Card Img"
@@ -378,11 +375,10 @@
                 <div class="catalog-card__content">
                   <div class="catalog-card__name">Название модели</div>
                   <div class="catalog-card__price">от 99 999₽</div>
-                </div></a
-              ><a
-                href="assets/img/catalog-card/catalog-card-image-3.jpg"
-                class="catalog__card catalog-card"
-                ><div class="catalog-card__image">
+                </div>
+              </div>
+              <div data-popup="#zoomSlider" class="catalog__card catalog-card">
+                <div class="catalog-card__image">
                   <img
                     src="assets/img/catalog-card/catalog-card-image-3.jpg"
                     alt="Card Img"
@@ -392,11 +388,10 @@
                 <div class="catalog-card__content">
                   <div class="catalog-card__name">Название модели</div>
                   <div class="catalog-card__price">от 99 999₽</div>
-                </div></a
-              ><a
-                href="assets/img/catalog-card/catalog-card-image-4.jpg"
-                class="catalog__card catalog-card"
-                ><div class="catalog-card__image">
+                </div>
+              </div>
+              <div data-popup="#zoomSlider" class="catalog__card catalog-card">
+                <div class="catalog-card__image">
                   <span class="catalog-card__discount">-20%</span>
                   <img
                     src="assets/img/catalog-card/catalog-card-image-4.jpg"
@@ -407,11 +402,10 @@
                 <div class="catalog-card__content">
                   <div class="catalog-card__name">Название модели</div>
                   <div class="catalog-card__price">от 99 999₽</div>
-                </div></a
-              ><a
-                href="assets/img/catalog-card/catalog-card-image-5.jpg"
-                class="catalog__card catalog-card"
-                ><div class="catalog-card__image">
+                </div>
+              </div>
+              <div data-popup="#zoomSlider" class="catalog__card catalog-card">
+                <div class="catalog-card__image">
                   <img
                     src="assets/img/catalog-card/catalog-card-image-5.jpg"
                     alt="Card Img"
@@ -421,10 +415,9 @@
                 <div class="catalog-card__content">
                   <div class="catalog-card__name">Название модели</div>
                   <div class="catalog-card__price">от 99 999₽</div>
-                </div></a
-              ><a
-                href="assets/img/catalog-card/catalog-card-image-6.jpg"
-                class="catalog__card catalog-card"
+                </div>
+              </div>
+              <data data-popup="#zoomSlider" class="catalog__card catalog-card"
                 ><div class="catalog-card__image">
                   <img
                     src="assets/img/catalog-card/catalog-card-image-6.jpg"
@@ -435,7 +428,7 @@
                 <div class="catalog-card__content">
                   <div class="catalog-card__name">Название модели</div>
                   <div class="catalog-card__price">от 99 999₽</div>
-                </div></a
+                </div></data
               >
             </div>
           </div>
@@ -1811,6 +1804,49 @@
       <div class="popup__wrapper popup-zoom__wrapper">
         <button class="popup-zoom__close close-btn popup__close"></button>
         <div data-youtube-place class="popup-zoom__image"></div>
+      </div>
+    </div>
+    <div id="zoomSlider" class="popup-zoom">
+      <div class="popup__wrapper popup-zoom__wrapper zoom-slider">
+        <button class="popup-zoom__close close-btn popup__close"></button>
+        <div class="popup-zoom__image-wrapper">
+          <div class="popup-zoom__image zoom-slider__slide _show">
+            <img
+              src="assets/img/catalog-card/catalog-card-image-1.jpg"
+              alt="Slider Image"
+              class="popup-zoom__image"
+            />
+          </div>
+          <div class="popup-zoom__image zoom-slider__slide">
+            <img
+              src="assets/img/catalog-card/catalog-card-image-2.jpg"
+              alt="Slider Image"
+              class="popup-zoom__image"
+            />
+          </div>
+          <div class="popup-zoom__image zoom-slider__slide">
+            <img
+              src="assets/img/catalog-card/catalog-card-image-3.jpg"
+              alt="Slider Image"
+              class="popup-zoom__image"
+            />
+          </div>
+          <div class="popup-zoom__image zoom-slider__slide">
+            <img
+              src="assets/img/catalog-card/catalog-card-image-4.jpg"
+              alt="Slider Image"
+              class="popup-zoom__image"
+            />
+          </div>
+        </div>
+        <div class="zoom-slider__controls">
+          <button
+            class="zoom-slider__button zoom-slider__button--prev _icon-slider-arrow"
+          ></button>
+          <button
+            class="zoom-slider__button zoom-slider__button--next _icon-slider-arrow"
+          ></button>
+        </div>
       </div>
     </div>
     <div id="video" class="popup popup-video">
