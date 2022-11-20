@@ -4743,7 +4743,7 @@ function () {
   LightGallery.prototype.validateLicense = function () {
     if (!this.settings.licenseKey) {
       console.error('Please provide a valid license key');
-    } else if (this.settings.licenseKey === '0000-0000-000-0000') {      
+    } else if (this.settings.licenseKey === '0000-0000-000-0000') {
     }
   };
 
@@ -6767,61 +6767,6 @@ var popup = function popup() {
 };
 
 /* harmony default export */ var module_popup = (popup);
-;// CONCATENATED MODULE: ./src/js/module/zoomSlider.js
-var zoomSlider = function zoomSlider() {
-  var slider = document.querySelector(".zoom-slider");
-  var slides = slider.querySelectorAll(".zoom-slider__slide");
-  var sliderButtonPrev = slider.querySelector(".zoom-slider__button--prev");
-  var sliderButtonNext = slider.querySelector(".zoom-slider__button--next");
-  var currentIndex = 1;
-
-  var slidesHide = function slidesHide() {
-    slides.forEach(function (slide) {
-      slide.classList.remove('_show');
-    });
-  };
-
-  var nextSlide = function nextSlide() {
-    slides.forEach(function (slide, index) {
-      if (slide.classList.contains("_show")) {
-        currentIndex = index;
-      }
-    });
-
-    if (slides.length - 1 > currentIndex) {
-      slides[currentIndex].classList.remove('_show');
-      slides[currentIndex + 1].classList.add('_show');
-    } else {
-      slidesHide();
-      slides[0].classList.add('_show');
-    }
-  };
-
-  var prevSlide = function prevSlide() {
-    slides.forEach(function (slide, index) {
-      if (slide.classList.contains("_show")) {
-        currentIndex = index;
-      }
-    });
-
-    if (0 < currentIndex) {
-      slides[currentIndex].classList.remove('_show');
-      slides[currentIndex - 1].classList.add('_show');
-    } else {
-      slidesHide();
-      slides[slides.length - 1].classList.add('_show');
-    }
-  };
-
-  sliderButtonNext.addEventListener('click', function () {
-    nextSlide();
-  });
-  sliderButtonPrev.addEventListener('click', function () {
-    prevSlide();
-  });
-};
-
-/* harmony default export */ var module_zoomSlider = (zoomSlider);
 ;// CONCATENATED MODULE: ./src/js/module/tabs.js
 var tabs = function tabs() {
   var tabsButton = document.querySelectorAll("[data-tab-btn] > button");
@@ -19907,9 +19852,9 @@ var script = function script() {
 mobileMenu(); // Подключения блока с попапами
 
 
-module_popup();
+module_popup(); // import zoomSlider from "./module/zoomSlider";
+// zoomSlider();
 
-module_zoomSlider();
 
 module_tabs();
 
