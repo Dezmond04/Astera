@@ -43,23 +43,25 @@
                 <span></span>
               </button>
               <div class="menu__body">
-                <ul class="menu__list">
-                  <li class="menu__item">
-                    <a href="#">Пункт 1</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#">Пункт 2</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#">Пункт 3</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#">Пункт 4</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#">Пункт 5</a>
-                  </li>
-                </ul>
+                <div class="menu__wrapper">
+                  <ul class="menu__list">
+                    <li class="menu__item">
+                      <a data-goTo="cases" href="#">Пункт 1</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#">Пункт 2</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#">Пункт 3</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#">Пункт 4</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#">Пункт 5</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -80,10 +82,7 @@
           <div class="cases-main__container">
             <div class="cases-main__top-wrapper">
               <div class="cases-main__title-wrapper">
-                <h1 class="cases-main__title title">Название кейса</h1>
-                <button class="cases-main__share _icon-share">
-                  Поделиться
-                </button>
+                <h1 class="cases-main__title title">Название кейса</h1>                
               </div>
               <div class="cases-main__about">
                 Рыбатекст используется дизайнерами, проектировщиками и
@@ -289,34 +288,76 @@
                   <div class="cases-main-slider__controls">
                     <button class="cases-main-slider__button cases-main-slider__button--prev _icon-slider-arrow"></button>
                     <button class="cases-main-slider__button cases-main-slider__button--next _icon-slider-arrow"></button>
-                  </div>
+                  </div>                  
                 </div>
               </div>
               <div class="cases-main__content">
-                <p class="cases-main__info">
-                  Рыбатекст используется дизайнерами, проектировщиками и
-                  фронтендерами, когда нужно быстро заполнить макеты или
-                  прототипы содержимым. Это тестовый контент, который не должен
-                  нести никакого смысла, лишь показать наличие самого текста или
-                  продемонстрировать типографику в деле.
-                </p>
-                <p class="cases-main__info">
-                  Рыбатекст используется дизайнерами, проектировщиками и
-                  фронтендерами, когда нужно быстро заполнить макеты или
-                  прототипы содержимым. Это тестовый контент, который не должен
-                  нести никакого смысла, лишь показать наличие самого текста или
-                  продемонстрировать типографику в деле.
-                </p>
-                <div class="cases-main__decision">
-                  Подходит ли вам такое решение?
+                <div class="casses-main__text">
+                  <p class="cases-main__info">
+                    Рыбатекст используется дизайнерами, проектировщиками и
+                    фронтендерами, когда нужно быстро заполнить макеты или
+                    прототипы содержимым. Это тестовый контент, который не должен
+                    нести никакого смысла, лишь показать наличие самого текста или
+                    продемонстрировать типографику в деле.
+                  </p>
+                  <p class="cases-main__info">
+                    Рыбатекст используется дизайнерами, проектировщиками и
+                    фронтендерами, когда нужно быстро заполнить макеты или
+                    прототипы содержимым. Это тестовый контент, который не должен
+                    нести никакого смысла, лишь показать наличие самого текста или
+                    продемонстрировать типографику в деле.
+                  </p>
+                  <div data-spollers class="cases-main-spollers">
+                    <div data-spoller-item class="cases-main-spollers__item">
+                      <button
+                        type="button"
+                        data-spoller
+                        class="cases-main-spollers__title"
+                      >
+                        Показать
+                        <span></span>
+                      </button>
+                      <div class="cases-main-spollers__body">
+                        <p class="cases-main__info">
+                          Рыбатекст используется дизайнерами, проектировщиками и
+                          фронтендерами, когда нужно быстро заполнить макеты или
+                          прототипы содержимым. Это тестовый контент, который не должен
+                          нести никакого смысла, лишь показать наличие самого текста или
+                          продемонстрировать типографику в деле.
+                        </p>
+                        <p class="cases-main__info">
+                          Рыбатекст используется дизайнерами, проектировщиками и
+                          фронтендерами, когда нужно быстро заполнить макеты или
+                          прототипы содержимым. Это тестовый контент, который не должен
+                          нести никакого смысла, лишь показать наличие самого текста или
+                          продемонстрировать типографику в деле.
+                        </p>
+                        <p class="cases-main__info">
+                          Рыбатекст используется дизайнерами, проектировщиками и
+                          фронтендерами, когда нужно быстро заполнить макеты или
+                          прототипы содержимым. Это тестовый контент, который не должен
+                          нести никакого смысла, лишь показать наличие самого текста или
+                          продемонстрировать типографику в деле.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="cases-main__buttons">
-                  <button class="cases-main__btn primary-btn">
-                    ДА, МНЕ ЭТО ПОДХОДИТ
-                  </button>
-                  <button class="cases-main__btn primary-btn">
-                    СМОТРЕТЬ ЕЩЕ КЕЙСЫ
-                  </button>
+                <div class="cases-main__control">
+                  <div class="cases-main__decision">
+                    <span>Подходит ли вам такое решение?</span>
+                    <button class="cases-main__share _icon-share">
+                      Поделиться
+                    </button>
+                  </div>
+                  <div class="cases-main__buttons">
+                    <button class="cases-main__btn primary-btn">
+                      ДА, МНЕ ЭТО ПОДХОДИТ
+                    </button>
+                    <button class="cases-main__btn primary-btn">
+                      СМОТРЕТЬ ЕЩЕ КЕЙСЫ
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -335,7 +376,7 @@
               </div>
               <div class="after-before__project-wrapper">
                 <div class="after-before__project">
-                  У вас уже есть дизайн-проект квартиры?
+                  <span>У вас уже есть дизайн-проект квартиры?</span>
                 </div>
                 <div class="after-before__buttons">
                   <button class="after-before__btn primary-btn">Да</button>

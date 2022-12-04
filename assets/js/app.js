@@ -3688,6 +3688,12 @@ var menu = function menu() {
     // if (!body.classList.contains("_lock")) {
     //   body.classList.add("_lock");
     // }
+  });
+  menuContent.addEventListener("click", function (e) {
+    if (e.target == menuContent && menuContent.classList.contains('_open')) {
+      body.classList.remove("_lock");
+      menuContent.classList.remove("_open");
+    }
   }); // closeMenu.addEventListener("click", () => {
   //   if (menuContent.classList.contains("_open")) {
   //     menuContent.classList.remove("_open");
@@ -4744,6 +4750,7 @@ function () {
     if (!this.settings.licenseKey) {
       console.error('Please provide a valid license key');
     } else if (this.settings.licenseKey === '0000-0000-000-0000') {
+      console.warn("lightGallery: " + this.settings.licenseKey + " license key is not valid for production use");
     }
   };
 
