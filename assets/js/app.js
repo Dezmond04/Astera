@@ -18646,7 +18646,7 @@ var getVimeoURLParams = function (defaultParams, videoInfo) {
 
   urlParams = urlParams[0] == '?' ? '&' + urlParams.slice(1) : urlParams || ''; // For vimeo last params gets priority if duplicates found
 
-  var vimeoPlayerParams = "?autoplay=0&muted=1" + (isPrivate ? "&h=" + hash : '') + defaultPlayerParams + urlParams;
+  var vimeoPlayerParams = "?autoplay=0&muted=0" + (isPrivate ? "&h=" + hash : '') + defaultPlayerParams + urlParams;
   return vimeoPlayerParams;
 };
 /**
@@ -18848,9 +18848,9 @@ function () {
       var videoId = 'lg-youtube' + index;
       var slideUrlParams = videoInfo.youtube[2] ? videoInfo.youtube[2] + '&' : ''; // For youtube first parms gets priority if duplicates found
 
-      var youTubePlayerParams = "?" + slideUrlParams + "wmode=opaque&autoplay=0&mute=1&enablejsapi=1";
+      var youTubePlayerParams = "?" + slideUrlParams + "wmode=opaque&autoplay=0&mute=0&enablejsapi=1";
       var playerParams = youTubePlayerParams + (this.settings.youTubePlayerParams ? '&' + param(this.settings.youTubePlayerParams) : '');
-      video = "<iframe allow=\"autoplay\" id=" + videoId + " class=\"lg-video-object lg-youtube " + addClass + "\" " + videoTitle + " src=\"//www.youtube.com/embed/" + (videoInfo.youtube[1] + playerParams) + "\" " + commonIframeProps + "></iframe>";
+      video = "<iframe allow=\"autoplay\" id=" + videoId + " class=\"lg-video-object lg-youtube " + addClass + "\" " + videoTitle + " src=\"https://www.youtube.com/embed/" + (videoInfo.youtube[1] + playerParams) + "\" " + commonIframeProps + "></iframe>";
     } else if (videoInfo.vimeo) {
       var videoId = 'lg-vimeo' + index;
       var playerParams = getVimeoURLParams(this.settings.vimeoPlayerParams, videoInfo);
