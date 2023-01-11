@@ -56,7 +56,7 @@
       <main class="main">
         <section class="main-banner">
           <div class="main-banner__slider main-banner-slider">
-            <div class="main-banner-slider__swiper swiper">
+            <div data-noloop class="main-banner-slider__swiper swiper">
               <div class="main-banner-slider__wrapper swiper-wrapper">
                 <div class="main-banner-slider__slide swiper-slide">
                   <div class="main-banner__container">
@@ -111,26 +111,6 @@
                         </button>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div
-                  class="main-banner-slider__slide main-banner-slider__slide--fs main-banner-slider__slide_flc swiper-slide"
-                >
-                  <div class="main-banner__image">
-                    <img
-                      src="assets/img/main-banner-image-1.jpg"
-                      alt="Photo"
-                      class="main-banner__img"
-                    />
-                    <img
-                      src="assets/img/main-banner-image-1-mobile.jpg"
-                      alt="Photo"
-                      class="main-banner__img-mobile"
-                    />
-                    <a href="#" class="main-banner-slider__link"
-                      ><span class="text">Ссылка на какойто кейс</span>
-                      <span class="arrow _icon-large-arrow"></span
-                    ></a>
                   </div>
                 </div>
               </div>
@@ -801,6 +781,10 @@
                           href="#"
                           class="tabs-callback__social-link _icon-whatsapp"
                         ></a>
+                        <a
+                          href="#"
+                          class="tabs-callback__social-link _icon-whatsapp"
+                        ></a>
                       </div>
                     </div>
                     <form
@@ -880,6 +864,10 @@
                         <a
                           href="#"
                           class="tabs-measurement__social-link _icon-telegram"
+                        ></a>
+                        <a
+                          href="#"
+                          class="tabs-measurement__social-link _icon-whatsapp"
                         ></a>
                         <a
                           href="#"
@@ -1841,7 +1829,14 @@
             <div class="social__wrapper">
               <div class="social__title title">
                 <span>Подписывайтесь и получайте специальные условия</span>
-                <button class="social__tippy">?</button>
+                <button class="social__tippy">
+                  <span>?</span>
+                  <span class="tippy"
+                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo vero molestiae incidunt assumenda. Recusandae
+                    repudiandae sint provident consequatur hic eius.</span
+                  >
+                </button>
               </div>
               <div class="social__links">
                 <a href="#" class="social__link _icon-vk"></a>
