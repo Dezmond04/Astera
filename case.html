@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/app.css" />
+    <link rel="stylesheet" href="./assets/css/app.css" />
+    <script src="assets/js/lightgallery.min.js" defer></script>
+    <script src="assets//js/lg-thumbnail.umd.js"></script>
     <script src="assets/js/app.js" defer></script>
     <title>Кейсы</title>
   </head>
@@ -94,7 +96,8 @@
                       class="cases-main-slider-img__wrapper swiper-wrapper"
                     >
                     <a
-                        data-src="//www.youtube.com/embed/neV3EPgvZ3g"
+                        
+                        href="https://www.youtube.com/watch?v=RXFIda7zghs"
                         data-poster="assets/img/cases/cases-main-image-1.jpg"
                         class="cases-main-slider-img__slide swiper-slide"
                       >
@@ -1261,14 +1264,7 @@
             <div class="social__wrapper">
               <div class="social__title title">
                 <span>Подписывайтесь и получайте специальные условия</span>
-                <button class="social__tippy">
-                  <span>?</span>
-                  <span class="tippy"
-                    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                    vero molestiae incidunt assumenda. Recusandae repudiandae sint
-                    provident consequatur hic eius.</span
-                  >
-                </button>
+                <button class="social__tippy">?</button>
               </div>
               <div class="social__links">
                 <a href="#" class="social__link _icon-vk"></a>
@@ -1532,5 +1528,16 @@
         </div>
       </div>
     </div>
-  </body>
+    <script>const galleries = document.querySelectorAll("[data-gallery]");
+      if (galleries.length) {
+        galleries.forEach((gallery) => {
+          lightGallery(gallery, {
+            speed: 400,
+            autoplay: true,
+            licenseKey: "7EC452A9-0CFD441C-BD984C7C-17C8456E",        
+          })
+        })
+      }
+      </script>
+  </body>  
 </html>
